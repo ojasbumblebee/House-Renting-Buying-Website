@@ -5646,3 +5646,12 @@ Processing by VisitorsController#welcome as HTML
 Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-02 02:28:43 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by VisitorsController#welcome as HTML
+  Rendering visitors/welcome.html.erb within layouts/application
+  Rendered visitors/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 965ms (Views: 949.6ms | ActiveRecord: 0.0ms)
+
+
