@@ -1,6 +1,7 @@
 class EnquiriesController < ApplicationController
   before_action :set_enquiry, only: [:show, :edit, :update, :destroy]
-
+  protect_from_forgery prepend: true
+  before_action :authenticate_user!
   # GET /enquiries
   # GET /enquiries.json
   def index
@@ -14,7 +15,7 @@ class EnquiriesController < ApplicationController
 
   # GET /enquiries/new
   def new
-    @enquiry = Enquiry.new
+    @enquiry = current_user.enquiries.build
   end
 
   # GET /enquiries/1/edit
@@ -24,7 +25,7 @@ class EnquiriesController < ApplicationController
   # POST /enquiries
   # POST /enquiries.json
   def create
-    @enquiry = Enquiry.new(enquiry_params)
+    @enquiry =current_user.enquiries.build(enquiry_params)
 
     respond_to do |format|
       if @enquiry.save

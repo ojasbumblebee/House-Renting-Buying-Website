@@ -22,6 +22,17 @@
   </div>
 
   <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.number_field :phone %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
@@ -30,6 +41,9 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
+  <% if current_user.role == "realtor" %>
+    <%= f.select :company_id, Company.all.map{|c| [c.name,c.id]}, :prompt => "Select a company" %>
+  <% end %>
 
   <div class="actions">
     <%= f.submit "Update" %>
