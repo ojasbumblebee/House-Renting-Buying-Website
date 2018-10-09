@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Listing:</strong>
+  <%= @interest_list_item.listing %>
+</p>
+
+<p>
+  <strong>Interest list:</strong>
+  <%= @interest_list_item.interest_list %>
+</p>
+
+<%= link_to 'Edit', edit_interest_list_item_path(@interest_list_item) %> |
+<%= link_to 'Back', interest_list_items_path %>

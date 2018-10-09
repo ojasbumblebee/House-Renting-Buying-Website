@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_29_212845) do
+ActiveRecord::Schema.define(version: 2018_10_09_154418) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -29,7 +29,24 @@ ActiveRecord::Schema.define(version: 2018_09_29_212845) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.integer "listing_id"
+    t.index ["listing_id"], name: "index_enquiries_on_listing_id"
     t.index ["user_id"], name: "index_enquiries_on_user_id"
+  end
+
+  create_table "interest_list_items", force: :cascade do |t|
+    t.integer "listing_id"
+    t.integer "interest_list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "quantity", default: 1
+    t.index ["interest_list_id"], name: "index_interest_list_items_on_interest_list_id"
+    t.index ["listing_id"], name: "index_interest_list_items_on_listing_id"
+  end
+
+  create_table "interest_lists", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "listings", force: :cascade do |t|
@@ -66,6 +83,9 @@ ActiveRecord::Schema.define(version: 2018_09_29_212845) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.integer "company_id"
+    t.string "role"
+    t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

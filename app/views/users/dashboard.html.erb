@@ -1,6 +1,18 @@
 <h1>Users#dashboard</h1>
 <p>Find me in app/views/users/dashboard.html.erb</p>
-<%= link_to 'List Users', users_path %>
-<%= link_to 'List Companies', companies_path %>
-<%= link_to 'List of Enquires', enquiries_path %>
-<%= link_to 'List Listings', listings_path %>
+<p><%= "You are logged in as #{current_user.role}" %></p>
+
+<% if current_user.role == "realtor" %>
+  <%= link_to 'List Users', users_path %>
+  <%= link_to 'Update My Profile', edit_user_registration_path %>
+  <%= link_to 'List Companies', companies_path %>
+  <%= link_to 'List of Enquires', enquiries_path %>
+  <%= link_to 'List Listings', listings_path %>
+
+<% elsif current_user.role == "house_hunter"  %>
+  <%= link_to 'List of Enquires', enquiries_path %>
+  <%= link_to 'List Listings', listings_path %>
+  <%= link_to 'View my Interest List', interest_list_items_path %>
+  <%= link_to 'Update My Profile', edit_user_registration_path %>
+
+<% end %>

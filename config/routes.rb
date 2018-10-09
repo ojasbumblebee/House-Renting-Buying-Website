@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :interest_list_items
+  resources :interest_lists
   get 'users/dashboard'
   get 'visitors/welcome'
   devise_for :users

@@ -45,5 +45,9 @@
   <%= @listing.contact %>
 </p>
 
+<p>
+  <%= button_to 'Add to interest list', interest_list_items_path(listing_id: @listing) %>
+</p>
+
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>

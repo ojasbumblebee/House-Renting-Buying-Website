@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Interest List Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Square footage</th>
+      <th>Year built</th>
+      <th>Style</th>
+      <th>List price</th>
+      <th>Floors</th>
+      <th>Basement</th>
+      <th>Current house owner</th>
+      <th>Contact</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interest_list_items.each do |interest_list_item| %>
+      <tr>
+        <td><%= interest_list_item.listing.location %></td>
+        <td><%= interest_list_item.listing.square_footage %></td>
+        <td><%= interest_list_item.listing.year_built %></td>
+        <td><%= interest_list_item.listing.style %></td>
+        <td><%= interest_list_item.listing.list_price %></td>
+        <td><%= interest_list_item.listing.floors %></td>
+        <td><%= interest_list_item.listing.basement %></td>
+        <td><%= interest_list_item.listing.current_house_owner %></td>
+        <td><%= interest_list_item.listing.contact %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
