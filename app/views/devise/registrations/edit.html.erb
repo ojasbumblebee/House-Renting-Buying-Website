@@ -43,6 +43,8 @@
   </div>
   <% if current_user.role == "realtor" %>
     <%= f.select :company_id, Company.all.map{|c| [c.name,c.id]}, :prompt => "Select a company" %>
+    <p>Or you can Create a new company by visiting the below link</p>
+    <p><%= link_to 'New Company', new_company_path %></p>
   <% end %>
 
   <div class="actions">

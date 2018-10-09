@@ -16,12 +16,24 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = current_user.listings.build
-    @companies = Company.all.map{|c| [c.name, c.id]}
+    #@companies = Company.all.map{|c| [c.name, c.id]}
+    @companies = Company.all.map do |c|
+      if current_user.company_id == c.id
+        [c.name, c.id]
+      end
+    end
+    #@company = current_user.company_id
   end
 
   # GET /listings/1/edit
   def edit
-    @companies = Company.all.map{|c| [c.name, c.id]}
+
+    @companies = Company.all.map do |c|
+      if current_user.company_id == c.id
+        [c.name, c.id]
+      end
+    end
+    #@company = current_user.company_id
   end
 
   # POST /listings

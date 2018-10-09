@@ -30,9 +30,22 @@
         <td><%= listing.basement %></td>
         <td><%= listing.current_house_owner %></td>
         <td><%= listing.contact %></td>
-        <td><%= link_to 'Show', listing %></td>
-        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.role == "admin" %>
+          <td><%= link_to 'Show', listing %></td>
+          <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+          <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%elsif current_user.role == "realtor" %>
+          <td><%= link_to 'Show', listing %></td>
+          <%if current_user.id == listing.user_id %>
+            <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+            <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        <%elsif current_user.role == "house_hunter" %>
+          <td><%= link_to 'Show', listing %></td>
+        <%end %>
+
+
+
       </tr>
     <% end %>
   </tbody>
