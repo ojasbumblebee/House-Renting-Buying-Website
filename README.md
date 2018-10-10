@@ -1,24 +1,37 @@
 # README
-check branch
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Welcome to Property Hub - A House Selling and Buying Tracking System
 
-* Ruby version
+Link to the application - 
 
-* System dependencies
+We have a preconfigured admin for the application
 
-* Configuration
+The admin login details are:
+email id: admin@propertyhub.com, password: qwerty
 
-* Database creation
+You can sign up as a
 
-* Database initialization
+ ●	Realtor
 
-* How to run the test suite
+ ●	House hunter
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby version   
+ 2.4.4
 
-* Deployment instructions
+* System dependencies 
 
-* ...
+  Gem dependencies: Devise, Paperclip, pg, rails12_factor 
+
+* Configuration 
+
+  Download the zip file
+
+  Run bundle install
+
+  Run rails db:migrate
+
+  Run rails db:seed
+
+  Run rails s
+
+  View the application on wwww.localhost:3000
