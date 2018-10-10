@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<p>
+  <%= image_tag @listing.listing_img.url, class: "listing-show" %>
+</p>
 <p>
   <strong>Location:</strong>
   <%= @listing.location %>

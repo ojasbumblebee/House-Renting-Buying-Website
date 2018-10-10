@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 #Use gem devise
 gem 'devise', '~> 4.5'
 
+
+gem 'paperclip', '~> 6.1'
 #gem "cancancan"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

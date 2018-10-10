@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   protect_from_forgery prepend: true
   before_action :authenticate_user!
+  #prepend_before_action :require_no_authentication, only: [:cancel]
+
+
   # GET /users
   # GET /users.json
 

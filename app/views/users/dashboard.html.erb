@@ -8,10 +8,12 @@
   <p><%= link_to 'List Companies', companies_path %></p>
   <p><%= link_to 'List of Enquires', enquiries_path %></p>
   <p><%= link_to 'List Listings', listings_path %></p>
+  <%= link_to 'CREATE NEW  User: Realtor or House Hunter', new_user_path %>
 
 <% elsif current_user.role == "house_hunter"  %>
   <p><%= link_to 'List of Enquires', enquiries_path %></p>
   <p><%= link_to 'List Listings', listings_path %></p>
+  <p><%= link_to 'List Companies', companies_path %></p>
   <p><%= link_to 'Update My Profile', edit_user_registration_path %></p>
 
 

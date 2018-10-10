@@ -5,7 +5,10 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    #@listings = Listing.all
+    @search = ListingSearch.new(params[:search])
+    @listings = @search.scope
+    #@listings = Listing.all
   end
 
   # GET /listings/1
@@ -22,7 +25,6 @@ class ListingsController < ApplicationController
         [c.name, c.id]
       end
     end
-    #@company = current_user.company_id
   end
 
   # GET /listings/1/edit
@@ -85,6 +87,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:location, :square_footage, :year_built, :style, :list_price, :floors, :basement, :current_house_owner, :contact, :company_id)
+      params.require(:listing).permit(:location, :square_footage, :year_built, :style, :list_price, :floors, :basement, :current_house_owner, :contact, :company_id, :listing_img)
     end
 end
