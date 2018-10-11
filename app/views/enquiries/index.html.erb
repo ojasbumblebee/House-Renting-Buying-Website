@@ -38,9 +38,8 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-<% if current_user.role == "admin" or current_user.role == "house_hunter" %>
 
+<% if current_user.role == "admin" or current_user.role == "house_hunter" %>
   <%= link_to 'New Enquiry', new_enquiry_path %>
 <%end %>
