@@ -164,7 +164,7 @@ bin/rails test test/controllers/user_controller_test.rb
 
 ## Contributors
 
-  - Ojas  - ovbarve
-  - Shraddha - sddhyade
+  - Ojas Barve- ovbarve
+  - Shraddha Dhyade- sddhyade
   - Roshni Rajan - rrajan3
 
