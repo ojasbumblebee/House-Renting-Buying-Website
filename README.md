@@ -11,9 +11,9 @@ We have a preconfigured admin for the application
 The admin login details are:
 email id: admin@propertyhub.com, password: "qwerty"
 
-Admin credentials: username: admin@propertyhub.com, password: "qwerty" 
-Realtor credentials: username: realtor@realtor.com, password: "qwerty" 
-House Hunter credentials: username: househunter@househunter.com, password: "qwerty"
+- Admin credentials: username: admin@propertyhub.com, password: "qwerty" 
+- Realtor credentials: username: realtor@realtor.com, password: "qwerty" 
+- House Hunter credentials: username: househunter@househunter.com, password: "qwerty"
 
 Configuration of my rails APP
 ---
@@ -111,9 +111,9 @@ Create Enquiries - In this link the house hunter can post enquiries for a partic
 
 Some Interesting Cases
 ---
-Deleting a company will delete all the related properties and will remove the company name assigned to any realtor
-On changing the company, the realtor can no longer make changes to the old houses.
-If a house hunter is deleted, all the existing inquiries will be deleted and also the name from the potential buyer list will be deleted
+- Deleting a company will delete all the related properties and will remove the company name assigned to any realtor
+- On changing the company, the realtor can no longer make changes to the old houses.
+- If a house hunter is deleted, all the existing inquiries will be deleted and also the name from the potential buyer list will be deleted
 
 ## Testing 
 
