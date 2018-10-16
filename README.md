@@ -11,7 +11,9 @@ We have a preconfigured admin for the application
 The admin login details are:
 email id: admin@propertyhub.com, password: "qwerty"
 
-Admin credentials: username: admin@propertyhub.com, password: "qwerty" Realtor credentials: username: realtor@realtor.com, password: "qwerty" House Hunter credentials: username: househunter@househunter.com, password: "qwerty"
+Admin credentials: username: admin@propertyhub.com, password: "qwerty" 
+Realtor credentials: username: realtor@realtor.com, password: "qwerty" 
+House Hunter credentials: username: househunter@househunter.com, password: "qwerty"
 
 Configuration of my rails APP
 ---
@@ -107,4 +109,62 @@ In this link the house hunter can view all of his/herb enquiries and they have t
  
 Create Enquiries - In this link the house hunter can post enquiries for a particular listings 
 
+Some Interesting Cases
+---
+Deleting a company will delete all the related properties and will remove the company name assigned to any realtor
+On changing the company, the realtor can no longer make changes to the old houses.
+If a house hunter is deleted, all the existing inquiries will be deleted and also the name from the potential buyer list will be deleted
+
+## Testing 
+
+The testing module has been designed thoroughly for the users model and controller. To view the configuration of the added database module of the user, go to `test/fixtures/users.yml` file. To run the test case, follow the steps:
+
+### For Models
+
+Clone the repository on your local machine.
+
+```
+git clone https://github.ncsu.edu/ovbarve/oodd_project.git
+```
+
+Go to the directory of the project where it is cloned using terminal
+
+```
+cd Desktop/oodd_project
+```
+
+Run the following command
+
+```
+bin/rails test test/models/user_test.rb
+```
+
+
+
+### For Controllers
+
+Clone the repository on your local machine.
+
+```
+git clone https://github.ncsu.edu/ovbarve/oodd_project.git
+```
+
+Go to the directory of the project where it is cloned using terminal
+
+```
+cd Desktop/oodd_project
+```
+
+Run the following command
+
+```
+bin/rails test test/controllers/user_controller_test.rb
+```
+
+
+## Contributors
+
+  - Ojas  - ovbarve
+  - Shraddha - sddhyade
+  - Roshni Rajan - rrajan3
 
