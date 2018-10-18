@@ -1,7 +1,7 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <%= image_tag @listing.listing_img.url, class: "listing-show" %>
-</p>
+<div class="center">
+  <div class="card bg-light text-dark">
+    <div class="card-body"><p id="notice"><%= notice %></p>
+
 <p>
   <strong>Location:</strong>
   <%= @listing.location %>
@@ -47,7 +47,8 @@
   <%= @listing.contact %>
 </p>
 
-<%if current_user.id == @listing.user_id and current_user.company_id == @listing.company_id %>
-  <%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%end %>
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
+    </div>
+  </div>
+</div>

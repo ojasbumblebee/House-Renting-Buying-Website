@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<div class="center">
+  <div class="card bg-light text-dark">
+    <div class="card-body">
+      <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -24,11 +27,9 @@
   <strong>Synopsis:</strong>
   <%= @company.synopsis %>
 </p>
-<% if  current_user.role == "house_hunter" or current_user.role == "realtor" %>
-  <%= link_to 'Back', companies_path %>
-<%else %>
-  <%= link_to 'Edit', edit_company_path(@company) %> |
-  <%= link_to 'Back', companies_path %>
-<%end %>
 
-
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
+    </div>
+  </div>
+</div>

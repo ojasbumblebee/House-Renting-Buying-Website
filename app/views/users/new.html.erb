@@ -1,9 +1,11 @@
+<div class="center">
+  <div class="card bg-light text-dark">
+    <div class="card-body">
 <h1>New User</h1>
 
 <%= render 'form', user: @user %>
-<% if current_user.role == "admin" %>
-  <p>You will Leave your current Logged In session</p>
-<% end %>
-
 
 <%= link_to 'Back', users_path %>
+    </div>
+  </div>
+</div>

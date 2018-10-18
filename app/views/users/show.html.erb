@@ -1,3 +1,6 @@
+<div class="center">
+  <div class="card bg-light text-dark">
+    <div class="card-body">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,9 +22,9 @@
   <strong>Phone:</strong>
   <%= @user.phone %>
 </p>
-<% if current_user.role == "admin" %>
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
-<% else %>
-  <%= link_to 'Back', users_path %>
-<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,8 @@
 
-
-<h1>Users</h1>
-
-<table>
-  <thead>
+<div class="card bg-light text-dark">
+  <div class="card-body" align="center"><table border="1">
+    <h3 align="center">USERS</h3>
+    <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
@@ -11,30 +10,30 @@
       <th>Phone</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.password %></td>
         <td><%= user.phone %></td>
-        <% if current_user.role == "admin" %>
-          <td><%= link_to 'Show', user %></td>
-          <td><%= link_to 'Edit', edit_user_registration_path %></td>
-          <% if user.role != 'admin' %>
-            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        <% else %>
-          <td><%= link_to 'Show', user %></td>
-        <% end %>
-
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+    <br>
 
-<%= link_to 'New User', new_user_path %>
+    <%= link_to 'New User', new_user_path %>
+  </div>
+</div>
+<style>
+  table{
+    padding: 50px;
+  }
+</style>
