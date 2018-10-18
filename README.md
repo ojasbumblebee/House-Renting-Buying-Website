@@ -116,7 +116,7 @@ Some Interesting Cases
 - If a house hunter is deleted, all the existing inquiries will be deleted and also the name from the potential buyer list will be deleted
 
 ## Testing 
-
+Checkout to branch roshni
 The testing module has been designed thoroughly for the users model and controller. To view the configuration of the added database module of the user, go to `test/fixtures/users.yml` file. To run the test case, follow the steps:
 
 ### For Models
