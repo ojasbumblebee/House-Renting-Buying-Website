@@ -131,6 +131,7 @@ Go to the directory of the project where it is cloned using terminal
 
 ```
 cd Desktop/oodd_project
+git checkout roshni
 ```
 
 Run the following command
@@ -153,6 +154,7 @@ Go to the directory of the project where it is cloned using terminal
 
 ```
 cd Desktop/oodd_project
+git checkout roshni
 ```
 
 Run the following command
